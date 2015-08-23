@@ -1,0 +1,30 @@
+#!/bin/bash
+pandoc ./intro/mmsetup.md \
+--output setup.html \
+--css pandoc.css \
+--template template.html \
+
+#pandoc -S -o mmtraining.epub title.txt \
+#intro/intro.md \
+#chap1/chap1.md \
+#chap2/chap2.md \
+#--epub-stylesheet epubstyle.css
+
+#pandoc -S -o mmtraining.html \
+#intro/intro.md \
+#chap1/chap1.md \
+#chap2/chap2.md \
+#--template template.html \
+#--css pandoc.css \
+#--toc \
+#--toc-depth=1
+
+#pandoc -S -o mmtraining.pdf \
+#intro/intro.md \
+#chap1/chap1.md \
+#chap2/chap2.md \
+#--latex-engine=pdflatex
+
+#git add --all
+#git commit -m "docs update"
+#git push
