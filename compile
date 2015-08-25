@@ -1,6 +1,6 @@
 #!/bin/bash
 pandoc ./intro/mmsetup.md \
---output setup.html \
+--output index.html \
 --css pandoc.css \
 --template template.html \
 

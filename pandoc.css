@@ -129,10 +129,15 @@ hr {
 }
 
 pre, code, kbd, samp {
-  color: #000;
-  font-family: monospace, monospace;
-  _font-family: 'courier new', monospace;
+  color: #111;
+  font-family: Lucida Sans Typewriter,Lucida Console,monaco,Bitstream Vera Sans Mono,monospace;
   font-size: 0.98em;
+  background-color: #D3D3D3;
+  white-space: pre-wrap; /* css-3 */
+  white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
 
 pre {
