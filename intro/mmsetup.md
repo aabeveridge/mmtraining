@@ -9,7 +9,7 @@ This section is for setting up MassMine for automated data collection. Often, ac
 
 ##Twitter Access
 
-To collect data from Twitter's API (application programming interface) users must login to their Twitter account and create a new "application." This "application" is not actually software or a computer program, but it is the access point through which MassMine collects data from Twitter. Every Twitter "application" is provided a certain amount of bandwidth (the amount data that may be accessed over a certain period of time), and this bandwidth limits the amount of free data an "application" may access through Twitter's API. For more details on how Twitter limits data access through their API, visit the documention pages for the Twitter APIs[^1].  MassMine allows users to collect the maximum amount of data permitted by Twitter's bandwidth restrictions.
+To collect data from Twitter's API (application programming interface) users must login to their Twitter account and create a new "application." This "application" is not actually software or a computer program, but it is the access point through which MassMine collects data from Twitter. Every Twitter "application" is provided a certain amount of bandwidth (the amount of data that may be accessed over a certain period of time), and this bandwidth limits the amount of free data an "application" may access through Twitter's API. For more details on how Twitter limits data access through their API, visit the documention pages for the Twitter APIs[^1].  MassMine allows users to collect the maximum amount of data permitted by Twitter's bandwidth restrictions.
 
 ###API Access Setup
 
@@ -36,16 +36,11 @@ Seting up "application" access through Twitter requires a normal Twitter account
 Twitter will send a text to your phone with a code in order to confirm your phone number. Follow the steps to finish confirmation. 
 
 ###Step 3
-After completing mobile setup, remain logged in to your account. Go to <https://dev.twitter.com> and click on "manage apps" under the "Tools" heading at the bottom of the page:
-
-![](./intro/manage-apps.png) 
-
-###Step 4
-Next you will click on the <code>Create New App</code> button. On the following screen, fill in the boxes shown below. Under "Name" you will need to provide a unique application name, but "Description" and "Website" are allowed to be generic information. 
+After completing mobile setup, remain logged in to your account and go to <https://apps.twitter.com>. Next, click on the <code>Create New App</code> button. On the following screen, fill in the boxes shown below. Under "Name" you will need to provide a unique application name, but "Description" and "Website" are allowed to be generic information. 
 
 ![](./intro/create-app.png)
 
-###Step 5
+###Step 4
 After creating the "application," click on the application name and it will take you to the page for that application. In there you will click on a link in the middle of the page titled: "manage keys and access tokens."
 
 ![](./intro/keys-click.png)
@@ -54,11 +49,12 @@ After clicking on "manage keys and access tokens" link, you will be redirected t
 
 ![](./intro/keys-tokens.png)
 
-###Step 6
+###Step 5
 While keeping the keys and tokens page open in your browser, return to your terminal window and use the <code>twitter-auth</code> task as shown below. Type in the following command and press ENTER.
 
     massmine --task=twitter-auth
    
 You will be asked: <code>Would you like to setup your Twitter credentials?</code> Answer with <code>yes</code> and press ENTER to continue. 
+
 
 [^1] <https://dev.twitter.com/overview/documentation>

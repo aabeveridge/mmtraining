@@ -20,7 +20,7 @@
 <li>More coming soon...</li>
 </ul>
 <h2 id="twitter-access">Twitter Access</h2>
-<p>To collect data from Twitter's API (application programming interface) users must login to their Twitter account and create a new &quot;application.&quot; This &quot;application&quot; is not actually software or a computer program, but it is the access point through which MassMine collects data from Twitter. Every Twitter &quot;application&quot; is provided a certain amount of bandwidth (the amount data that may be accessed over a certain period of time), and this bandwidth limits the amount of free data an &quot;application&quot; may access through Twitter's API. For more details on how Twitter limits data access through their API, visit the documention pages for the Twitter APIs[^1]. MassMine allows users to collect the maximum amount of data permitted by Twitter's bandwidth restrictions.</p>
+<p>To collect data from Twitter's API (application programming interface) users must login to their Twitter account and create a new &quot;application.&quot; This &quot;application&quot; is not actually software or a computer program, but it is the access point through which MassMine collects data from Twitter. Every Twitter &quot;application&quot; is provided a certain amount of bandwidth (the amount of data that may be accessed over a certain period of time), and this bandwidth limits the amount of free data an &quot;application&quot; may access through Twitter's API. For more details on how Twitter limits data access through their API, visit the documention pages for the Twitter APIs[^1]. MassMine allows users to collect the maximum amount of data permitted by Twitter's bandwidth restrictions.</p>
 <h3 id="api-access-setup">API Access Setup</h3>
 <h3 id="step-1">Step 1</h3>
 <p>If you have not installed MassMine, please refer to the newest installation instructions for your operating system at <a href="http://www.massmine.org/docs/install.html">www.massmine.org</a>. Following installation, open a terminal and call MassMine's help feature. Type in the following command and press ENTER:</p>
@@ -38,18 +38,12 @@
 </div>
 <p>Twitter will send a text to your phone with a code in order to confirm your phone number. Follow the steps to finish confirmation.</p>
 <h3 id="step-3">Step 3</h3>
-<p>After completing mobile setup, remain logged in to your account. Go to <a href="https://dev.twitter.com" class="uri">https://dev.twitter.com</a> and click on &quot;manage apps&quot; under the &quot;Tools&quot; heading at the bottom of the page:</p>
-<div class="figure">
-<img src="./intro/manage-apps.png" alt="" />
-
-</div>
-<h3 id="step-4">Step 4</h3>
-<p>Next you will click on the <code>Create New App</code> button. On the following screen, fill in the boxes shown below. Under &quot;Name&quot; you will need to provide a unique application name, but &quot;Description&quot; and &quot;Website&quot; are allowed to be generic information.</p>
+<p>After completing mobile setup, remain logged in to your account and go to <a href="https://apps.twitter.com" class="uri">https://apps.twitter.com</a>. Next, click on the <code>Create New App</code> button. On the following screen, fill in the boxes shown below. Under &quot;Name&quot; you will need to provide a unique application name, but &quot;Description&quot; and &quot;Website&quot; are allowed to be generic information.</p>
 <div class="figure">
 <img src="./intro/create-app.png" alt="" />
 
 </div>
-<h3 id="step-5">Step 5</h3>
+<h3 id="step-4">Step 4</h3>
 <p>After creating the &quot;application,&quot; click on the application name and it will take you to the page for that application. In there you will click on a link in the middle of the page titled: &quot;manage keys and access tokens.&quot;</p>
 <div class="figure">
 <img src="./intro/keys-click.png" alt="" />
@@ -60,7 +54,7 @@
 <img src="./intro/keys-tokens.png" alt="" />
 
 </div>
-<h3 id="step-6">Step 6</h3>
+<h3 id="step-5">Step 5</h3>
 <p>While keeping the keys and tokens page open in your browser, return to your terminal window and use the <code>twitter-auth</code> task as shown below. Type in the following command and press ENTER.</p>
 <pre><code>massmine --task=twitter-auth</code></pre>
 <p>You will be asked: <code>Would you like to setup your Twitter credentials?</code> Answer with <code>yes</code> and press ENTER to continue.</p>
