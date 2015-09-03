@@ -40,20 +40,23 @@
       </ul>
       <h2 id="twitter-authentification">Twitter Authentification</h2>
       <p>To collect data from Twitter’s APIs (application programming interfaces) you must login to your Twitter account and create a new “application.” This “application” is not actually software or a computer program, but it is the access point through which MassMine collects data from Twitter. Every Twitter “application” is provided a certain amount of bandwidth<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>, and this limits the amount of free data an “application” may access through Twitter’s API. For more details on how Twitter limits data access through their API, visit the documention pages for the Twitter APIs<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>. MassMine assists users in collecting the maximum amount of data permitted by Twitter’s bandwidth restrictions.</p>
-      <h3 id="step-1-massmine-help"><strong>Step 1: MassMine Help</strong></h3>
+      <h3 id="massmine-help"><strong>1) MassMine Help</strong></h3>
       <p><strong>1.1</strong><br />
       If you have not installed MassMine, please refer to the newest installation instructions for your operating system at <a href="http://www.massmine.org/docs/install.html">www.massmine.org</a>. After MassMine has been installed, open a terminal and call MassMine’s help feature.</p>
       <p>Type in the following command into the terminal and press ENTER:</p>
+      <pre><code>massmine --help</code></pre>
+      <p>MassMine also accepts the short form version of the help command:</p>
       <pre><code>massmine -h</code></pre>
+      <p>All of MassMine’s commands have a short form version, but for the sake of clarity the longer form commands will be used.</p>
       <p><strong>1.2</strong><br />
       It is important to familiarize yourself with the help feature. To use the help feature to find the <code>task</code> MassMine uses to authenticate Twitter, type in the following command and press ENTER:</p>
-      <pre><code>massmine -h task</code></pre>
+      <pre><code>massmine --help=task</code></pre>
       <p>Using this feature in MassMine shows that the correct command for Twitter authentification is:</p>
       <pre><code>twitter-auth</code></pre>
       <p>Later in this section you will need this command to authenticate MassMine with Twitter.</p>
       <p><strong>1.3</strong><br />
       Minimize your Terminal window and open your Internet browser.</p>
-      <h3 id="step-2-creating-an-application"><strong>Step 2: Creating an Application</strong></h3>
+      <h3 id="creating-an-application"><strong>2) Creating an Application</strong></h3>
       <p><strong>2.1</strong><br />
       Seting up “application” access through Twitter requires a normal Twitter account. If you already have a Twitter account, using it to collect data through Twitter’s API will not affect your account. However, in order to add API access to your Twitter account, you must prove account ownership by providing your mobile telephone number. Go to your Twitter home page and click on <code>settings</code> in the drop down menu under the <code>profile and settings</code> tab.</p>
       <p><strong>2.2</strong><br />
@@ -65,7 +68,7 @@
       </div>
       <hr />
       <p>Twitter will send a text to your phone with a code to confirm your phone number. Follow the steps provided by Twitter to finish confirmation.</p>
-      <h3 id="step-3-application-setup"><strong>Step 3: Application Setup</strong></h3>
+      <h3 id="application-setup"><strong>3: Application Setup</strong></h3>
       <p><strong>3.1</strong><br />
       After completing mobile verification, remain logged in to your account and go to <a href="https://apps.twitter.com" class="uri">https://apps.twitter.com</a>, and click on the <code>Create New App</code> button.</p>
       <p><strong>3.2</strong><br />
@@ -76,7 +79,7 @@
       
       </div>
       <hr />
-      <h3 id="step-4-application-secrets-and-tokens"><strong>Step 4: Application Secrets and Tokens</strong></h3>
+      <h3 id="application-secrets-and-tokens"><strong>4) Application Secrets and Tokens</strong></h3>
       <p><strong>4.1</strong><br />
       After creating the “application,” click on the application name and it will take you to the page for that application. In there you will click on a link in the middle of the page titled: “manage keys and access tokens.”</p>
       <hr />
@@ -93,7 +96,7 @@
       
       </div>
       <hr />
-      <h3 id="step-5-entering-application-secrets-and-tokens-into-massmine"><strong>Step 5: Entering Application Secrets and Tokens into MassMine</strong></h3>
+      <h3 id="saving-application-secrets-and-tokens-in-massmine"><strong>5) Saving Application Secrets and Tokens in MassMine</strong></h3>
       <p><strong>5.1</strong><br />
       While keeping the keys and tokens page open in your browser, return to your terminal window and use the <code>twitter-auth</code> task as shown below. Type in the following command and press ENTER:</p>
       <pre><code>massmine --task=twitter-auth</code></pre>
@@ -105,9 +108,24 @@
       Follow the same process from Step 5.3 for the <code>Consumer Secret</code>, <code>Access Token</code>, and <code>Access Token Secret</code>. Once you have finished copying the 4 secrets and tokens into MassMine, you will see <code>Authentification setup finished!</code>.</p>
       <hr />
       <h1 id="starting-and-managing-a-data-collection-project"><strong>Starting and Managing a Data Collection Project</strong></h1>
-      <p>This section explains how to start and manage a long-term data collection project. Managing a long-term project is not merely limited to collecting data and having a careful system for backing up files—although, file managment is certainly an important aspect of project management. Project management also includes monitoring the content of the data, conducting test analyses, and adjusting or augmenting the project research question as data collection is underway. Social network users and trends are dynamic, always shifting and changing, and so researchers interested in conducting social network research have to be prepared to adjust or shift the scope of their projects while collecting data.</p>
-      <p>This section and the next section, “Developing a Reserach Question,” are complimentary. While the “Developing a Research Question” section explains the importance of understanding the available data types when developing a research project, this section is also important to the process of developing a research question. Often, it is not until data collection begins that a more viable or sustainable research question emerges. The data may encourage other questions or redirect the project entirely, and therefore properly managing a data collection means also paying close attention to the data while it is collected.</p>
+      <h3 id="what-is-project-management"><strong>What is project management?</strong></h3>
+      <p>Managing a long-term research project is not merely limited to collecting data and having a careful system for backing up files—although, file managment is certainly an important aspect of project management. Project management also includes monitoring the content of the data, conducting test analyses, and adjusting or augmenting the research as data collection is underway. Social network users and trends are dynamic, always shifting and changing, and therefore researchers interested in conducting social network research have to prepare to adjust or shift the scope of their projects while collecting data.</p>
+      <p>This section and the next section, “Developing a Reserach Question,” are complimentary. While the “Developing a Research Question” section explains the importance of understanding the available data types when developing a research project, this section is also important to the process of developing a research question. Often, it is not until data collection begins that a more viable or sustainable research question emerges. The data may encourage other questions or redirect the project entirely, and therefore properly managing a data collection means paying close attention to the data while it is collected.</p>
       <p>However, sometimes researchers are interested in collecting data because something within a social network is relevant, trending, or possibly viral. In these cases, which are frequent, scholars do not yet have a scope or particular question for their project, and need to start collecting data as soon as possible for exploratory purposes (and because many trends come and go quickly). Social networks are a useful site for exploratoring new possibilities for social and political research, for studying the flow of information, for investigating the sharing and remixing of digital artifacts, or for understanding the composition of particular user networks.</p>
+      <h3 id="what-are-snippets"><strong>What are “snippets”?</strong></h3>
+      <p>Throughout the text below you will be encouraged to save “snippets” of text commands for later use. Wikipedia defines snippets as “a programming term for a small region of re-usable source code, machine code, or text.”<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> The snippets that you will save from this section will be MassMine text commands for the terminal that you will need to remember at a later point in time. In later chapters you will save snippets of R code for statistical analyses. One of the most intimidating aspects of using a terminal or learning to program is the vast amount of terms, commands, syntax, and functions that must be remembered. By creating a basic workflow for saving snippets and recalling them later, the need to memorize is greatly reduced. Many text editors provide snippet management, and this will be addressed in later sections of this textbook. However, for this section, a simple text file for saving snippets will be adequate.</p>
+      <h4 id="create-the-snippets-file">Create the snippets file</h4>
+      <p>Open a text editor on your computer and add the following line at the top:</p>
+      <pre><code># massmine snippets</code></pre>
+      <h3 id="starting-a-data-collection"><strong>1) Starting a Data Collection</strong></h3>
+      <p><strong>1.1</strong></p>
+      <p>MassMine can run directly from the command line by using the <code>task</code> function. Start by using the help function to determine which tasks are available for MassMine. Type the following into MassMine and press ENTER:</p>
+      <pre><code>massmine --help=task</code></pre>
+      <p>Below is another variation of this command. Both commands function the same and provide a list of the avialable tasks in MassMine. Type the following into MassMine and press ENTER:</p>
+      <pre><code>massmine -h task</code></pre>
+      <p>If MassMine has already been authenticated with Twitter, then you can run a small test data collection with the command below. With this command MassMine will pull 10 recent tweets from Twitter’s Rest API, and save the raw JSON data to your working directory. Your “working directory” is the location on your computer’s hard drive where the terminal is currently running. Type the following command to see the contents of that “directory”:</p>
+      <pre><code>ls</code></pre>
+      <p>If the “directory” or “folder” is empty, then the terminal will return another blank line. Otherwise, you should see a list of the files and other directories contained with your current working directory.</p>
       <h1 id="developing-a-research-question"><strong>Developing a Research Question</strong></h1>
       <p>This section will explain the relationship between available data and the development of a research question.</p>
       <h1 id="data-analysis"><strong>Data Analysis</strong></h1>
@@ -117,6 +135,7 @@
       <ol>
       <li id="fn1"><p>“Bandwidth” is the amount of data that may be accessed over a specified period of time<a href="#fnref1">↩</a></p></li>
       <li id="fn2"><p><a href="https://dev.twitter.com/overview/documentation" class="uri">https://dev.twitter.com/overview/documentation</a><a href="#fnref2">↩</a></p></li>
+      <li id="fn3"><p>“Bandwidth” is the amount of data that may be accessed over a specified period of time<a href="#fnref3">↩</a></p></li>
       </ol>
       </div>
       </div>
