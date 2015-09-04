@@ -8,31 +8,49 @@ This section and the next section, "Developing a Reserach Question," are complim
 However, sometimes researchers are interested in collecting data because something within a social network is relevant, trending, or possibly viral. In these cases, which are frequent, scholars do not yet have a scope or particular question for their project, and need to start collecting data as soon as possible for exploratory purposes (and because many trends come and go quickly). Social networks are a useful site for exploratoring new possibilities for social and political research, for studying the flow of information, for investigating the sharing and remixing of digital artifacts, or for understanding the composition of particular user networks.
 
 ### **What are "snippets"?**
-Throughout the text below you will be encouraged to save "snippets" of text commands for later use. Wikipedia defines snippets as "a programming term for a small region of re-usable source code, machine code, or text."[^1] The snippets that you will save from this section will be MassMine text commands for the terminal that you will need to remember at a later point in time. In later chapters you will save snippets of R code for statistical analyses. One of the most intimidating aspects of using a terminal or learning to program is the vast amount of terms, commands, syntax, and functions that must be remembered. By creating a basic workflow for saving snippets and recalling them later, the need to memorize is greatly reduced. Many text editors provide snippet management, and this will be addressed in later sections of this textbook. However, for this section, a simple text file for saving snippets will be adequate. 
+Throughout this textbook there are directions for saving "snippets" of terminal commands or code for later use. Wikipedia defines snippets as "a programming term for a small region of re-usable source code, machine code, or text."[^1] The snippets suggested for saving from this section will be MassMine text commands and terminal commands for beginners to easily and quickly rerun MassMine. In later there are directions for saving snippets of R code for statistical analyses and data visualization. One of the most intimidating aspects of using a terminal or learning to program are the vast amount of terms, commands, syntax, and functions that must be remembered. By creating a basic workflow for saving snippets and recalling them later, the need for rote memorization is greatly reduced. Many text editors provide snippet management, and this will be addressed in later sections of this textbook. However, for this section, a simple text file for saving snippets will suffice. 
 
-####Create the snippets file
+####Creating the snippets file
 
-Open a text editor on your computer and add the following line at the top:
+Open a text editor on your computer and add the following line at the top of a new text file:
 
     # massmine snippets
     
+The `#` is a "comment" indicator common to many programming languages. Even though programming knowledge is not necessary for using MassMine to collect data, many of the conventions common to programming and reproducible research are suggested throughout the first sections of this book. 
 
+Begin by saving a basic snippet for the help command. This snippet will use the help command to find the available tasks in MassMine:
+
+    # massmine help command to find available tasks
+    massmine --help=task
+    
+The first line in the snippet is a comment explaining what the command does, and the second line is the command itself. It is important to put commands on their own line to help error-proof the copying and pasting of commands. After a while, you will have many of the snippet commands memorized, but for now it is better to save important commands in your snippets file and to add descriptive comments to them. 
+
+Minimize your snippets file, but do not close it. Throughout this section you will see `*add this command to your snippets file` after certain terminal commands. Please be sure to type the commands in the terminal first, and test them before writing them into your snippets file. It is important that you get used to typing in a terminal and that you test the commands before saving them. Also, keep in mind that terminal commands must be precise and they are case sensitive. Many errors are simply caused by typos or incorrect case. Errors are ok--do not fear breaking the computer by typing an incorrect command. If you recieve an error, double check that your command matches the instructions exactly, and then try again. 
 
 ### **1) Starting a Data Collection**
 
 **1.1**  
 
-MassMine can run directly from the command line by using the `task` function. Start by using the help function to determine which tasks are available for MassMine. Type the following into MassMine and press ENTER:
+MassMine can run directly from the command line by using the `task` function. Start by using the help function to determine which tasks are available for MassMine. Type the following command and press ENTER:
 
     massmine --help=task
     
-Below is another variation of this command. Both commands function the same and provide a list of the avialable tasks in MassMine. Type the following into MassMine and press ENTER:
+Below is another variation of this command. Both commands function the same and provide a list of the avialable tasks in MassMine. Type the following command and press ENTER:
 
     massmine -h task
+    
+From the list provided by the `--help` command, we will use the `twitter-search` task. This task pulls data from Twitter's Rest API, and it is a useful way to collect a small amount of historical data. Using the command below, MassMine will pull 10 recent tweets from Twitter's Rest API, and save the raw JSON data to your working directory. Your "working directory" is the location on your computer's hard drive where the terminal is currently operating. Type the following command and press ENTER:
 
-If MassMine has already been authenticated with Twitter, then you can run a small test data collection with the command below. With this command MassMine will pull 10 recent tweets from Twitter's Rest API, and save the raw JSON data to your working directory. Your "working directory" is the location on your computer's hard drive where the terminal is currently running. Type the following command to see the contents of that "directory":
+    massmine --task=twitter-search --query=love --count=10 --output=love.json
+
+You should have seen the MassMine splash screen followed by MassMine returning your terminal back to the command line. Check your working directory to see if MassMine saved the data for you. You should see a file called `love.json` in your working directory. Type in the following command and press ENTER:
 
     ls
 
-If the "directory" or "folder" is empty, then the terminal will return another blank line. Otherwise, you should see a list of the files and other directories contained with your current working directory. 
+*add this command to your snippets file
 
+The command `ls` is a general command for terminals that lists files and directories within your current working directory. You will likely memorize this command quickly, but it is a good idea to save it for now along with a quick description. 
+
+**1.2**
+
+The data file provided by MassMine is the raw JSON (Javascript Object Notation)

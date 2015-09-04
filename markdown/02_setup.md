@@ -56,7 +56,7 @@ Next, click on the `mobile` side bar menu option to provide your mobile number.
 
 Twitter will send a text to your phone with a code to confirm your phone number. Follow the steps provided by Twitter to finish confirmation. 
 
-### **3: Application Setup**
+### **3) Application Setup**
 
 **3.1**  
 After completing mobile verification, remain logged in to your account and go to <https://apps.twitter.com>, and click on the `Create New App` button. 
