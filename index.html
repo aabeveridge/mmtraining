@@ -1,66 +1,125 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+<div id="container">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <title></title>
+  <title>MassMine eBook </title>
   <style type="text/css">code{white-space: pre;}</style>
-  <link rel="stylesheet" href="pandoc.css" type="text/css" />
+  <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
-    <div class="container">
+      <div class="nav">
+      <ul>
+        <hm><li class="home"><a href="https://massmine.org"><strong>MassMine</strong></a></li></hm>
+      </ul>
+    </div>
+      <div class="container">
     <div class="row">
-            <div class="span12">
-            <h1 id="massmine-setup">MassMine Setup</h1>
-<p>This section is for setting up MassMine for automated data collection. Often, access to API data sources requires API credentials, and setup is necessary before MassMine can collect data. This section explains how to access the required keys and tokens that allow API access, and how to save those credentials for use in ongoing data colletion projects. The steps below are a one-time setup. Once completed, MassMine will automatically connect to the available data sources.</p>
-<p><strong>The following MassMine sources DO NOT require credentials or setup for access:</strong></p>
-<ul>
-<li>Wikipedia</li>
-<li>More coming soon...</li>
-</ul>
-<h2 id="twitter-access">Twitter Access</h2>
-<p>To collect data from Twitter's API (application programming interface) users must login to their Twitter account and create a new &quot;application.&quot; This &quot;application&quot; is not actually software or a computer program, but it is the access point through which MassMine collects data from Twitter. Every Twitter &quot;application&quot; is provided a certain amount of bandwidth (the amount of data that may be accessed over a certain period of time), and this bandwidth limits the amount of free data an &quot;application&quot; may access through Twitter's API. For more details on how Twitter limits data access through their API, visit the documention pages for the Twitter APIs[^1]. MassMine allows users to collect the maximum amount of data permitted by Twitter's bandwidth restrictions.</p>
-<h3 id="api-access-setup">API Access Setup</h3>
-<h3 id="step-1">Step 1</h3>
-<p>If you have not installed MassMine, please refer to the newest installation instructions for your operating system at <a href="http://www.massmine.org/docs/install.html">www.massmine.org</a>. Following installation, open a terminal and call MassMine's help feature. Type in the following command and press ENTER:</p>
-<pre><code>massmine -h</code></pre>
-<p>It is important to familiarize yourself with the help feature. To use the help feature to find the <code>task</code> MassMine uses to authenticate Twitter, type in the following command and press ENTER:</p>
-<pre><code>massmine -h task</code></pre>
-<p>Using this feature in MassMine shows that the correct command for Twitter authentification is:</p>
-<pre><code>twitter-auth</code></pre>
-<p>Later in this section you will need this command to authenticate MassMine with Twitter. Minimize your Terminal window and open your Internet browser.</p>
-<h3 id="step-2">Step 2</h3>
-<p>Seting up &quot;application&quot; access through Twitter requires a normal Twitter account. If you already have a Twitter account, using it to collect data through Twitter's API will not affect your account. However, in order to add API access to your Twitter account, you must prove account ownership by providing your mobile telephone number. Go to your Twitter home page and click on <code>settings</code> in the drop down menu under the <code>profile and settings</code> tab. Next, click on the <code>mobile</code> side bar menu option to provide your mobile number.</p>
-<div class="figure">
-<img src="./intro/mobile-twit.png" alt="" />
-
-</div>
-<p>Twitter will send a text to your phone with a code in order to confirm your phone number. Follow the steps to finish confirmation.</p>
-<h3 id="step-3">Step 3</h3>
-<p>After completing mobile setup, remain logged in to your account and go to <a href="https://apps.twitter.com" class="uri">https://apps.twitter.com</a>. Next, click on the <code>Create New App</code> button. On the following screen, fill in the boxes shown below. Under &quot;Name&quot; you will need to provide a unique application name, but &quot;Description&quot; and &quot;Website&quot; are allowed to be generic information.</p>
-<div class="figure">
-<img src="./intro/create-app.png" alt="" />
-
-</div>
-<h3 id="step-4">Step 4</h3>
-<p>After creating the &quot;application,&quot; click on the application name and it will take you to the page for that application. In there you will click on a link in the middle of the page titled: &quot;manage keys and access tokens.&quot;</p>
-<div class="figure">
-<img src="./intro/keys-click.png" alt="" />
-
-</div>
-<p>After clicking on &quot;manage keys and access tokens&quot; link, you will be redirected to the page that provides the credentials MassMine requires in order to collect data from the Twitter APIs. Keep this page open because you will need to copy and paste the keys and tokens on this page into MassMine.</p>
-<div class="figure">
-<img src="./intro/keys-tokens.png" alt="" />
-
-</div>
-<h3 id="step-5">Step 5</h3>
-<p>While keeping the keys and tokens page open in your browser, return to your terminal window and use the <code>twitter-auth</code> task as shown below. Type in the following command and press ENTER.</p>
-<pre><code>massmine --task=twitter-auth</code></pre>
-<p>You will be asked: <code>Would you like to setup your Twitter credentials?</code> Answer with <code>yes</code> and press ENTER to continue.</p>
-<p>[^1] <a href="https://dev.twitter.com/overview/documentation" class="uri">https://dev.twitter.com/overview/documentation</a></p>
-            </div>
+            <div id="TOC" class="span3">
+        <div class="welltoc">
+        <ul>
+        <li><a href="#introduction"><strong>Introduction</strong></a></li>
+        <li><a href="#api-authentification"><strong>API Authentification</strong></a></li>
+        <li><a href="#developing-a-research-question"><strong>Developing a Research Question</strong></a></li>
+        <li><a href="#managing-a-data-collection"><strong>Managing a Data Collection</strong></a></li>
+        <li><a href="#data-analysis"><strong>Data Analysis</strong></a></li>
+        </ul>
+        </div>
+      </div>
+            <div class="span9">
+      <h1 id="introduction"><strong>Introduction</strong></h1>
+      <p>This is the test introduction for the MassMine reference manual and training materials.</p>
+      <h1 id="api-authentification"><strong>API Authentification</strong></h1>
+      <p>This section is for setting up MassMine for automated data collection. Often, API data sources require API credentials, and setup is necessary before MassMine can collect data. This section explains how to access the required keys and tokens that allow API access, and how to save those credentials for use in ongoing data colletion projects. The steps below are a one-time setup. Once completed, MassMine will automatically connect to the available data sources for collection projects.</p>
+      <p><strong>The following MassMine sources DO NOT require credentials or setup for access:</strong></p>
+      <ul>
+      <li>Wikipedia</li>
+      <li>More coming soon…</li>
+      </ul>
+      <h2 id="twitter-authentification">Twitter Authentification</h2>
+      <p>To collect data from Twitter’s APIs (application programming interfaces) you must login to your Twitter account and create a new “application.” This “application” is not actually software or a computer program, but it is the access point through which MassMine collects data from Twitter. Every Twitter “application” is provided a certain amount of bandwidth<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>, and this limits the amount of free data an “application” may access through Twitter’s API. For more details on how Twitter limits data access through their API, visit the documention pages for the Twitter APIs<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>. MassMine assists users in collecting the maximum amount of data permitted by Twitter’s bandwidth restrictions.</p>
+      <h3 id="step-1-massmine-help"><strong>Step 1: MassMine Help</strong></h3>
+      <p><strong>1.1</strong><br />
+      If you have not installed MassMine, please refer to the newest installation instructions for your operating system at <a href="http://www.massmine.org/docs/install.html">www.massmine.org</a>. After MassMine has been installed, open a terminal and call MassMine’s help feature.</p>
+      <p>Type in the following command into the terminal and press ENTER:</p>
+      <pre><code>massmine -h</code></pre>
+      <p><strong>1.2</strong><br />
+      It is important to familiarize yourself with the help feature. To use the help feature to find the <code>task</code> MassMine uses to authenticate Twitter, type in the following command and press ENTER:</p>
+      <pre><code>massmine -h task</code></pre>
+      <p>Using this feature in MassMine shows that the correct command for Twitter authentification is:</p>
+      <pre><code>twitter-auth</code></pre>
+      <p>Later in this section you will need this command to authenticate MassMine with Twitter.</p>
+      <p><strong>1.3</strong><br />
+      Minimize your Terminal window and open your Internet browser.</p>
+      <h3 id="step-2-creating-an-application"><strong>Step 2: Creating an Application</strong></h3>
+      <p><strong>2.1</strong><br />
+      Seting up “application” access through Twitter requires a normal Twitter account. If you already have a Twitter account, using it to collect data through Twitter’s API will not affect your account. However, in order to add API access to your Twitter account, you must prove account ownership by providing your mobile telephone number. Go to your Twitter home page and click on <code>settings</code> in the drop down menu under the <code>profile and settings</code> tab.</p>
+      <p><strong>2.2</strong><br />
+      Next, click on the <code>mobile</code> side bar menu option to provide your mobile number.</p>
+      <hr />
+      <div class="figure">
+      <img src="./images/mobile-twit.png" alt="" />
+      
+      </div>
+      <hr />
+      <p>Twitter will send a text to your phone with a code to confirm your phone number. Follow the steps provided by Twitter to finish confirmation.</p>
+      <h3 id="step-3-application-setup"><strong>Step 3: Application Setup</strong></h3>
+      <p><strong>3.1</strong><br />
+      After completing mobile verification, remain logged in to your account and go to <a href="https://apps.twitter.com" class="uri">https://apps.twitter.com</a>, and click on the <code>Create New App</code> button.</p>
+      <p><strong>3.2</strong><br />
+      On the following screen, fill in the boxes shown below. Under “Name” you will need to provide a unique application name, but “Description” and “Website” are allowed to be generic information.</p>
+      <hr />
+      <div class="figure">
+      <img src="./images/create-app.png" alt="" />
+      
+      </div>
+      <hr />
+      <h3 id="step-4-application-secrets-and-tokens"><strong>Step 4: Application Secrets and Tokens</strong></h3>
+      <p><strong>4.1</strong><br />
+      After creating the “application,” click on the application name and it will take you to the page for that application. In there you will click on a link in the middle of the page titled: “manage keys and access tokens.”</p>
+      <hr />
+      <div class="figure">
+      <img src="./images/keys-click.png" alt="" />
+      
+      </div>
+      <hr />
+      <p><strong>4.2</strong><br />
+      After clicking on “manage keys and access tokens” link, you will be redirected to the page that provides the credentials MassMine requires in order to collect data from the Twitter APIs. Keep this page open because you will need to copy and paste the keys and tokens on this page into MassMine.</p>
+      <hr />
+      <div class="figure">
+      <img src="./images/keys-tokens.png" alt="" />
+      
+      </div>
+      <hr />
+      <h3 id="step-5-entering-application-secrets-and-tokens-into-massmine"><strong>Step 5: Entering Application Secrets and Tokens into MassMine</strong></h3>
+      <p><strong>5.1</strong><br />
+      While keeping the keys and tokens page open in your browser, return to your terminal window and use the <code>twitter-auth</code> task as shown below. Type in the following command and press ENTER:</p>
+      <pre><code>massmine --task=twitter-auth</code></pre>
+      <p><strong>5.2</strong><br />
+      You will be asked: <code>Would you like to setup your Twitter credentials?</code> Answer with <code>yes</code> and press ENTER to continue.</p>
+      <p><strong>5.3</strong><br />
+      Next you will be asked to enter your <code>Consumer Key</code>. Return to your browser as shown in Figure XXX, copy the consumer key from the webpage, and then paste it back in your terminal and press ENTER.</p>
+      <p><strong>5.4</strong><br />
+      Follow the same process from Step 5.3 for the <code>Consumer Secret</code>, <code>Access Token</code>, and <code>Access Token Secret</code>. Once you have copied the 4 secrets and tokens into MassMine, you should see</p>
+      <hr />
+      <h1 id="developing-a-research-question"><strong>Developing a Research Question</strong></h1>
+      <p>This section will explain the relationship between available data and the development of a research question.</p>
+      <h1 id="managing-a-data-collection"><strong>Managing a Data Collection</strong></h1>
+      <p>This section explains how to manage a data collection, how to adjust or change a research question based on changes in social network data, and how to carefully archive and save data for later analysis.</p>
+      <h1 id="data-analysis"><strong>Data Analysis</strong></h1>
+      <h2 id="multiple-twitter-accounts">Multiple Twitter Accounts</h2>
+      <div class="footnotes">
+      <hr />
+      <ol>
+      <li id="fn1"><p>“Bandwidth” is the amount of data that may be accessed over a specified period of time<a href="#fnref1">↩</a></p></li>
+      <li id="fn2"><p><a href="https://dev.twitter.com/overview/documentation" class="uri">https://dev.twitter.com/overview/documentation</a><a href="#fnref2">↩</a></p></li>
+      </ol>
+      </div>
+      </div>
     </div>
   </div>
 </body>
+      </div>
 </html>

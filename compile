@@ -1,8 +1,13 @@
 #!/bin/bash
-pandoc ./intro/mmsetup.md \
+pandoc ./markdown/*.md \
 --output index.html \
---css pandoc.css \
---template template.html \
+--css style.css \
+--template ./templates/main.html \
+--include-before-body ./templates/nav.html \
+--toc \
+--toc-depth=1 \
+--title-prefix="MassMine eBook" \
+--smart
 
 #pandoc -S -o mmtraining.epub title.txt \
 #intro/intro.md \
