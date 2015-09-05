@@ -1,6 +1,6 @@
 # **API Authentification**
 
-This section is for setting up MassMine for automated data collection. Often, API data sources require API credentials, and setup is necessary before MassMine can collect data. This section explains how to access the required keys and tokens that allow API access, and how to save those credentials for use in ongoing data colletion projects. The steps below are a one-time setup. Once completed, MassMine will automatically connect to the available data sources for collection projects. 
+This section is for setting up MassMine for automated data collection. Often, API data sources require API credentials, and setup is necessary before MassMine can be authorized to collect data. This section explains how to access the required keys and tokens that allow API access, and how to save those credentials for use in ongoing data colletion projects. The steps below are a one-time setup. Once completed, MassMine will automatically connect to the available data sources for collection projects. 
 
 **The following MassMine sources DO NOT require credentials or setup for access:**
 
@@ -98,7 +98,8 @@ You will be asked: `Would you like to setup your Twitter credentials?` Answer wi
 Next you will be asked to enter your `Consumer Key`. Return to your browser as shown in Figure XXX, copy the consumer key from the webpage, and then paste it back in your terminal and press ENTER. 
 
 **5.4**  
-Follow the same process from Step 5.3 for the `Consumer Secret`, `Access Token`, and `Access Token Secret`. Once you have copied the 4 secrets and tokens into MassMine, you should see 
+Follow the same process from Step 5.3 for the `Consumer Secret`, `Access Token`, and `Access Token Secret`. Once you have finished copying the 4 secrets and tokens into MassMine, you will see `Authentification setup finished!`. 
+
 
 ***
 
