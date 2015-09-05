@@ -80,7 +80,7 @@ After clicking on "manage keys and access tokens" link, you will be redirected t
 
 ***
 
-![Image 4](./images/keys-tokens.png)
+![](./images/keys-tokens.png)
 
 ***
 
