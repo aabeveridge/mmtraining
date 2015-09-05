@@ -44,7 +44,7 @@ Next, click on the `mobile` side bar menu option to provide your mobile number.
 
 ***
 
-![Figure 1](./images/mobile-twit.png)
+![](./images/mobile-twit.png)
 
 ***
 
@@ -60,7 +60,7 @@ On the following screen, fill in the boxes shown below. Under "Name" you will ne
 
 ***
 
-![Figure 2](./images/create-app.png)
+![](./images/create-app.png)
 
 ***
 
@@ -71,7 +71,7 @@ After creating the "application," click on the application name and it will take
 
 ***
 
-![Figure 3](./images/keys-click.png)
+![](./images/keys-click.png)
 
 ***
 
