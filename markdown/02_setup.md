@@ -44,7 +44,7 @@ Next, click on the `mobile` side bar menu option to provide your mobile number.
 
 ***
 
-![](./images/mobile-twit.png)
+![Figure 1](./images/mobile-twit.png)
 
 ***
 
@@ -60,7 +60,7 @@ On the following screen, fill in the boxes shown below. Under "Name" you will ne
 
 ***
 
-![](./images/create-app.png)
+![Figure 2](./images/create-app.png)
 
 ***
 
@@ -71,7 +71,7 @@ After creating the "application," click on the application name and it will take
 
 ***
 
-![](./images/keys-click.png)
+![Figure 3](./images/keys-click.png)
 
 ***
 
@@ -80,7 +80,7 @@ After clicking on "manage keys and access tokens" link, you will be redirected t
 
 ***
 
-![](./images/keys-tokens.png)
+![Image 4](./images/keys-tokens.png)
 
 ***
 
@@ -95,7 +95,7 @@ While keeping the keys and tokens page open in your browser, return to your term
 You will be asked: `Would you like to setup your Twitter credentials?` Answer with `yes` and press ENTER to continue. 
 
 **5.3**  
-Next you will be asked to enter your `Consumer Key`. Return to your browser as shown in Figure XXX, copy the consumer key from the webpage, and then paste it back in your terminal and press ENTER. 
+Next you will be asked to enter your `Consumer Key`. Return to your browser window as shown in last image example above. Copy the consumer key from the webpage, paste it back in your terminal, and then press ENTER. 
 
 **5.4**  
 Follow the same process from Step 5.3 for the `Consumer Secret`, `Access Token`, and `Access Token Secret`. Once you have finished copying the 4 secrets and tokens into MassMine, you will see `Authentification setup finished!`. 
